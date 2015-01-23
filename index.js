@@ -41,13 +41,21 @@ module.exports = function(opt){
 
 
 
+        // Allow for subdirectories
+        var basepath = '';
+        if( opt.rootFolder ) {
+          var pathArr = path.dirname( file.path ).split( path.sep );
+          var baseIndex = pathArr.indexOf( opt.rootFolder );
+          basepath = pathArr.slice(baseIndex + 1).join( path.sep ) + '/';
+        }
+
         var parsep =path.basename(file.relative);
         var name =path.basename(file.relative, '.html')
         var filename =opt.dest+'/'+name+'.png';
-        var url ='http://localhost:'+opt.p+'/'+parsep;
+        var url ='http://localhost:'+opt.p+'/'+basepath+parsep;
 
 
-             webshot(url, filename, opt,function(err,stream) { 
+             webshot(url, filename, opt,function(err,stream) {
 
                 if (err) {
                     this.emit('error', new gutil.PluginError('gulp-htmlshot', err));
