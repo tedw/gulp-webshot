@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cobaimelan/gulp-webshot"
+    "url": "git://github.com/tedw/gulp-webshot"
   },
 
   "keywords": [
@@ -16,9 +16,9 @@
   "author": "Ayhan Kuru",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cobaimelan/gulp-webshot/issues"
+    "url": "https://github.com/tedw/gulp-webshot/issues"
   },
-  "homepage": "https://github.com/cobaimelan/gulp-webshot",
+  "homepage": "https://github.com/tedw/gulp-webshot",
   "dependencies": {
     "through2": "~0.4.1",
     "gulp-util": "~2.2.14",
